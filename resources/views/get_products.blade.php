@@ -6,7 +6,7 @@
                    <th>Product name</th>
                     <th>Quantity in stock</th>
                      <th>Price per item</th>
-                     <th>Datetime submitted</th>
+                      <th>Datetime submitted</th>
                      <th>Total value number</th>
                                           
                        <th>Action</th>
