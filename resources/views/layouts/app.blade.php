@@ -18,6 +18,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/products.js"></script>
+	
 </head>
 <body>
     <div id="app">

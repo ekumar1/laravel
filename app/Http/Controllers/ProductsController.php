@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Products;
 use Illuminate\Http\Request;
+use DB;
 
 class ProductsController extends Controller
 {
@@ -14,11 +15,23 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        // View Products List
-		$products = Products::get();
+        // View Products List		 
+		$products = DB::table('products')
+					->orderBy('id', 'desc')
+					->get();
         return view('product', compact('products'));
 		 
     }
+	
+	 public function get_products()
+    {
+        // View Products List
+		$products = DB::table('products')
+					->orderBy('id', 'desc')
+					->get();
+        return view('get_products', compact('products'));
+		
+	}
 
     /**
      * Show the form for creating a new resource.
@@ -41,14 +54,12 @@ class ProductsController extends Controller
     public function store(Request $request)
     {
         // Save Products
-		$product = new Product;
-        $product->product_name = $request->name;
-        $product->quantity = $request->quantity;
+		$product = new Products;
+        $product->product_name = $request->product_name;
+        $product->quantity = $request->qty;
         $product->price = $request->price;
         
-		//var_dump($product)
-		
-        $product->save();
+		$product->save();
 
 		
     }
@@ -93,8 +104,10 @@ class ProductsController extends Controller
      * @param  \App\Products  $products
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Products $products)
+    public function destroy($products_id)
     {
         //
+		 Products::where('id', $products_id)->delete();
+		
     }
 }
