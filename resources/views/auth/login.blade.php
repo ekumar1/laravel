@@ -63,6 +63,14 @@
                             </div>
                         </div>
                     </form>
+					
+					
+				Login Details For Manage Products </br>
+				
+				Email :- coalitiontechnologies1@gmail.com </br>
+				Password:- laravel@123
+				
+				
                 </div>
             </div>
         </div>

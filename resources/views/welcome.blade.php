@@ -18,12 +18,19 @@
                 </div>
 
                 <div class="links">
-                    <a href="/manage_produtcs">Manage Products</a>
-                    <a href="/products">New Products</a>
-                    <a href="/products">Popular Products</a>
-                    <a href="/products">Best Selling Products</a>
+                    <a href="{{url('/login')}}">Manage Products</a>
+                    <a href="#">New Products</a>
+                    <a href="#">Popular Products</a>
+                    <a href="#">Best Selling Products</a>
                     
                 </div>
+				
+				Login Details For Manage Products </br>
+				
+				Email :- coalitiontechnologies1@gmail.com </br>
+				Password:- laravel@123
+				
+				
             </div>
         </div>
  @endsection
