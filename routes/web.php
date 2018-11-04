@@ -27,6 +27,5 @@ Route::resource('/manage_products', 'ProductsController');
 //Get Product
 Route::get('/products', 'ProductsController@get_products');
 
-// Delete Product
-Route::get('/manage_products}', 'ProductsController@destroy');
+ 
 
